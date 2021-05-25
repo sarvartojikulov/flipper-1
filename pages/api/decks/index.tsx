@@ -1,18 +1,15 @@
 import dbConnect from '../../../utils/dbConnect'
-import mongoose from 'mongoose'
-import Deck from '../../../models/Deck'
-import User from '../../../models/User'
-
-
-dbConnect()
+import {autheenticated} from '../../../utils/auth_middleware'
+const Deck = require('../../../models/Deck');
+const User = require('../../../models/User');
 //NOTE POST method creates a new deck
 //NOTE GET method gets all decks
 //NOTE required to pass a userID as body
 
   //TODO delete userID and fix the cases
-const id = '606b9bb0e792291b301230d1';
+const id = '6078b6bb9944591a9466d58c';
 dbConnect()
-export default async (req,res) => {
+export default autheenticated(async (req,res) => {
   const {method} = req;
   switch (method) {
     case 'GET':
@@ -20,7 +17,7 @@ export default async (req,res) => {
         const userDecklist = await User.findById(id,'decklist').exec();
         const arr = [];
         for(let item of (userDecklist as any).decklist){
-          let deck = await Deck.findById(item,'name content').exec();
+          let deck = await Deck.findById(item , 'name content').exec();
           arr.push(deck);
         }
         res.json(arr);
@@ -42,4 +39,4 @@ export default async (req,res) => {
         res.status(400).json({success: false});
       }
   }
-}
+})

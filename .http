@@ -1,0 +1,17 @@
+GET http://localhost:3000/decks HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzhiNmJiOTk0NDU5MWE5NDY2ZDU4YyIsImlhdCI6MTYxODUzMjk3NSwiZXhwIjoxNjE4NTM2NTc1fQ.6mZHZApXK7IWwelDyNvArun7muD1JqjH5Si_su2ak90
+
+###
+POST http://localhost:3000/api/decks HTTP/1.1
+content-type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzhiNmJiOTk0NDU5MWE5NDY2ZDU4YyIsImlhdCI6MTYxODUzMjAyMCwiZXhwIjoxNjE4NTM1NjIwfQ.B6NW3YVn5m7Ko-1HkDmIABs4nXa0LPJDStt5wg4S3Ss
+
+{
+  "name": "sdjs"
+}
+
+
+###
+//FIXME clear all users in users_collection
+POST http://localhost:3000/api/test HTTP/1.1
