@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import GoogleLogin from 'react-google-login'
 import {MouseEvent} from 'react';
 
 
@@ -13,8 +12,8 @@ const Home = () => {
   }
 
   return (
-    <div className="h-screen flex justify-center items-center">
-      <button className="bg-blue-600 p-4 rounded-lg text-white" onClick={onClickHandle}>LOG-IN with Google</button>
+    <div style={{height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
+      <button style={{backgroundColor: "#034EDF", padding: "1rem", borderRadius: "15px", color: "white"}} onClick={onClickHandle}>LOG-IN with Google</button>
     </div>
   )
 }
