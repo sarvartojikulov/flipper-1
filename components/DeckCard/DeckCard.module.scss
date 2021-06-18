@@ -1,0 +1,111 @@
+.wrapper {
+  transition: all 1s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.15rem;
+}
+
+.wrapper[data-clicked="true"] {
+  animation-name: expand;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  .clickSection {
+    top: 3.7rem;
+  }
+}
+
+.wrapper[data-clicked="false"] {
+  animation-name: shrink;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  .clickSection {
+    top: 0.5rem;
+  }
+}
+
+@keyframes expand {
+  0% {
+    height: 6.8rem;
+  }
+  100% {
+    height: 9.9rem;
+  }
+}
+@keyframes shrink {
+  0% {
+    height: 9.9rem;
+  }
+  100% {
+    height: 6.8rem;
+  }
+}
+
+.background {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d2228;
+  color: #ededed;
+  font-size: 1.2rem;
+  width: 20.625rem;
+  height: 5rem;
+  padding: 0 1.2rem;
+  border-radius: 1.2rem;
+  z-index: 10;
+  filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.25));
+}
+
+.clickSection {
+  display: flex;
+  background-color: #2f3843;
+  width: 19.7rem;
+  height: 5.5rem;
+  position: absolute;
+  border-radius: 1.2rem;
+  z-index: 0;
+  top: 0.5rem;
+  filter: drop-shadow(0px -5px 20px rgba(0, 0, 0, 0.25));
+  transition: top 0.5s;
+}
+
+.clickSection > button:first-child{
+	font-family: "Roboto";
+}
+
+.clickSection > button:last-child{
+    color: #1ca720;
+	font-family: "Roboto";
+}
+
+.clickSection > svg {
+    margin-top: 2.76rem;
+}
+
+.clickSection button {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin-top: 2.2rem;
+
+  	:focus {
+    	outline: none;
+    	outline-offset: none;
+  	}
+}
