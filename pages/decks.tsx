@@ -1,23 +1,25 @@
-import { NextPageContext } from 'next'
-// import {getRequsetWithMiddleware} from '../utils/getRequsetWithMiddleware'
+// import { NextPageContext } from 'next'
+import DeckCard from '../components/DeckCard/DeckCard'
+import NavBar from '../components/NavBar/NavBar'
+
+let testDECK = (id) => {
+  return {
+  deckName: "JavaScript",
+  uid: id,
+  content: [],
+  createdAt: "yesterday",
+  userHandle: "admin"
+  }
+}
 
 const decks = ({list}) => {
   return (
     <div>
-      <h1 onClick={() => console.log(list)
-        }>Your Deck LIST</h1>
-      <br />
-      <br />
-      <br />
-      <ul>
-        {/* {list.map(item => {
-          if(item === null){
-            return <li key={Math.random()}>deck undefined</li>
-          }
-          return <li key={Math.random()}>{item.name}</li>
-        })} */}
-        TEST
-      </ul>
+      <NavBar/>
+      <DeckCard deck={testDECK(123)}/>
+      <DeckCard deck={testDECK(255)}/>
+      <DeckCard deck={testDECK(951)}/>
+
     </div>
   )
 }
