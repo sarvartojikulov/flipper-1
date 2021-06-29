@@ -1,8 +1,26 @@
+
+.wrapper{
+	position: fixed;
+	z-index: 15;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	
+	
+}
 .body{
 	position: absolute;
-	top: 50px;
-	width: 120px;
+	padding: 13px;
 	z-index: 20;
-	height: 320px;
-	background-color: aquamarine;
+	top: 45px;
+	right: 40px;
+	width: 180px;
+	height: 170px;
+	border-radius: 6px;
+	background-color: #2E3138;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
