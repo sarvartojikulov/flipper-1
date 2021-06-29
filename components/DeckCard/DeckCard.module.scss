@@ -103,9 +103,30 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     margin-top: 2.2rem;
+    	outline: none;
 
   	:focus {
     	outline: none;
     	outline-offset: none;
   	}
+}
+
+.showmorePaneEnter{
+	opacity: 0;
+  z-index: 15;
+}
+
+.showmorePaneEnterActive{
+	opacity: 1;
+  transition: all ease-in 300ms;
+}
+
+.showmorePaneExit{
+	opacity: 1;
+  z-index: 15;
+}
+
+.showmorePaneExitActive{
+	opacity: 0;
+  transition: all ease-out 300ms;
 }
