@@ -1,0 +1,19 @@
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	> svg {
+		margin: 0 auto;
+	}
+}
+
+.body{
+	padding: 15px 0 15px 21px;
+	svg{
+		margin: 0px;
+	}
+	span{
+		margin-left: 17px;
+	}
+	display: flex;
+	align-items: center;
+}
