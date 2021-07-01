@@ -1,6 +1,6 @@
 // import { NextPageContext } from 'next'
-import DeckCard from '../components/DeckCard/DeckCard'
-import NavBar from '../components/NavBar/NavBar'
+import DeckCard from '../../components/DeckCard/DeckCard'
+import NavBar from '../../components/NavBar/NavBar'
 
 let testDECK = (id) => {
   return {
