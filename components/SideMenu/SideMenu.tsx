@@ -2,30 +2,6 @@ import React, {FC} from "react";
 import styles from "./SideMenu.module.scss"
 import { useState } from "react";
 import BurgerSVG from "../../icons/BurgerSVG";
-<<<<<<< HEAD
-
-const SideMenu: FC = () => {
-
-	const [showMenu, setShowMenu] = useState<boolean>(false);
-
-	return (
-		<div>
-			<BurgerSVG onClick={() => setShowMenu(!showMenu)} />
-
-			{showMenu && (<div className={styles.hideMenu} onClick={() => setShowMenu(false)}></div>)}
-
-
-			{showMenu && (<div className={styles.menuBody}></div>)}
-
-
-
-		</div>
-	)
-}
-
-
-export default SideMenu;
-=======
 import SideMenuItem from "../SideMenuItem/SideMenuItem";
 import ProfileSVG from "../../icons/ProfileSVG";
 import HomeSVG from "../../icons/HomeSVG";
@@ -102,4 +78,3 @@ const SideMenu: FC = () => {
 };
 
 export default SideMenu;
->>>>>>> ef0f20d... feat: add transitions for sidemenu, refactor some code.

@@ -9,17 +9,6 @@
 	z-index: 50;
 }
 
-<<<<<<< HEAD
-.menuBody{
-	position:fixed;
-	top: 0;
-	right: 0;
-	width: 80%;
-	height: 100%;
-	background-color: white;
-	z-index: 51;
-}
-=======
 .menuBody {
   position: fixed;
   top: 0;
@@ -90,4 +79,3 @@
   opacity: 0;
   transition: all ease-out 300ms;
 }
->>>>>>> ef0f20d... feat: add transitions for sidemenu, refactor some code.
